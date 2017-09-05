@@ -1,0 +1,54 @@
+
+@import "../_var";
+
+._tpos_(){
+  .ftb {
+    font-weight: bold;
+  }
+
+  .cp {
+    cursor: pointer;
+  }
+
+  .tc {
+    text-align: center;
+  }
+
+  .tl {
+    text-align: left;
+  }
+
+  .tr {
+    text-align: right;
+  }
+}
+
+._ft(@size,@max:30,@step:2) when ( @size <= @max ) {
+  .ft@{size} {
+    font-size: unit(@size * 2, px);
+  }
+  ._ft( @size + @step ,@max,@step);
+}
+
+
+.ft(@size,@max:30,@step:2){
+  ._ft( @size,@max:30,@step:2 );
+  ._tpos_();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

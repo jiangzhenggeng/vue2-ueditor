@@ -1,0 +1,39 @@
+
+@import "../_var";
+
+.padding(@size,@attr){
+    @{attr}: unit(@size, px);
+}
+
+.pd(@num,@max:30,@step:2) when ( @num <= @max ) {
+  .pdl@{num} {
+    .padding( unit(@num * 2, px) ,padding-left);
+  }
+  .pdt@{num} {
+    .padding( unit(@num * 2, px) ,padding-top);
+  }
+  .pdr@{num} {
+    .padding( unit(@num * 2, px) ,padding-right);
+  }
+  .pdb@{num} {
+    .padding( unit(@num * 2, px) ,padding-bottom);
+  }
+  .pd( @num + @step ,@max,@step);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,207 @@
+
+//流卡片
+.stream-card(){
+  @bianju:24px;
+
+  .mian-stream {
+
+    li{
+      background-color: #fff;
+      position: relative;
+      .global-padding{
+        position: relative;
+        padding: @bianju @bianju;
+      }
+      &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        background-color: #ebebeb;
+        bottom: 0;
+      }
+    }
+
+    li.small{
+      .stream-box{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      @img-height: 180px;
+      .stream-img{
+        width: @img-height;
+        height: @img-height;
+        &,.progressive-image{
+          overflow: hidden;
+          border-radius: 10px;
+        }
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .stream-right {
+        margin-left: 20px;
+        overflow: hidden;
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+      .stream-title {
+        line-height: 40px;
+        height: 80px;
+        overflow: hidden;
+      }
+
+      .video,
+      .icon-video:before{
+        width: 34px;
+        height: 34px;
+        background-position: -60px -476px;
+      }
+      .video{
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        z-index:3;
+      }
+
+    }
+
+    li.large {
+
+      .stream-title {
+        height: 40px;
+        overflow: hidden;
+        line-height: 40px;
+      }
+      .stream-box{
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .stream-img {
+        width: 100%;
+        height: 350px;
+        &,.progressive-image{
+          overflow: hidden;
+          border-radius: 10px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .mask-cover {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      .stream-bottom {
+        color: #ccc;
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+        padding-bottom: 26px;
+        width: 100%;
+        z-index:3;
+      }
+      .stream-bottom-inner{
+        box-sizing: content-box;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .stream-text {
+        flex:1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .praise-replay {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        > span {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    //话题
+    li.topic{
+      .stream-topic {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        z-index: 2;
+      }
+      .stream-topic-title {
+        font-size: 44px;
+        margin-bottom: 8px;
+        font-weight: 800;
+        text-shadow: 0px 24px 48px rgba(0, 0, 0, .3);
+      }
+      .stream-topic-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 44px;
+        line-height: 44px;
+        padding: 0 30px;
+        font-size: 30px;
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 0.4);
+        > span {
+          width: 100px;
+          display: flex;
+          margin: 0 10px;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+        .line {
+          width: 2px;
+          height: 20px;
+          margin: 0;
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+        .icon{
+          margin-right: 10px;
+        }
+      }
+      .stream-status {
+        margin-top: 6px;
+      }
+    }
+  }
+
+}

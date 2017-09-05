@@ -1,0 +1,8 @@
+{
+  "presets": [
+    ["es2015", { "modules": false }],
+    "react",    // 只有react项目才需要
+    "stage-0"
+  ],
+  "plugins": []
+}

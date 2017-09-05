@@ -1,0 +1,39 @@
+
+@import "../_var";
+
+.margin(@size,@attr){
+  @{attr}: unit(@size, px);
+}
+
+.mg(@num,@max:30,@step:2) when ( @num <= @max ) {
+  .mgl@{num} {
+    .margin( unit(@num * 2, px) ,margin-left);
+  }
+  .mgt@{num} {
+    .margin( unit(@num * 2, px) ,margin-top);
+  }
+  .mgr@{num} {
+    .margin( unit(@num * 2, px) ,margin-right);
+  }
+  .mgb@{num} {
+    .margin( unit(@num * 2, px) ,margin-bottom);
+  }
+  .mg( @num + @step ,@max,@step);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
